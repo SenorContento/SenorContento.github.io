@@ -1,0 +1,51 @@
+#Do note that any changes to this file _config.yml will not show up until you restart jekyll.
+
+gems:
+  #- jekyll-feed #No need for jekyll-feed when I have atom.xml in blog directory.
+  - jekyll-paginate
+  - jekyll-redirect-from #Currently don't need it, but in the future maybe
+  - jekyll-sitemap
+  - jekyll-mentions
+  - jemoji
+  - jekyll-seo-tag
+
+defaults:
+  -
+    scope:
+      path: "" # an empty string here means all files in the project
+    values:
+      layout: post
+      project: Senorcontento.GitHub.io
+      projectid: senorcontento.github.io
+      developer: SenorContento
+      description: This is a blog written by Brandon Gomez which is meant to share information others might like or find useful.
+      site-url: https://senorcontento.com
+      rss-url: https://brandons.site/rss?ddu=
+      branch: master
+      image: /sitedata/images/favicon.png
+
+twitter:
+  username: BrandonAndrewGo  
+facebook:
+  app_id: 174255442924226
+  admins: 100007630755367
+author: BrandonAndrewGo
+social:
+  links: [
+"https://www.facebook.com/SenorContento",
+"https://twitter.com/BrandonAndrewGo",
+"https://www.instagram.com/bgbrandongomez",
+"https://www.linkedin.com/in/brandon-gomez-7426b3b6",
+"https://www.snapchat.com/add/bgbrandongomez",
+"https://www.youtube.com/channel/UCykPguamRje7THT09pNrnBA",
+"https://plus.google.com/105811941589453921658",
+"https://plus.google.com/110788237408085427995",
+"https://www.flickr.com/people/senorcontento/",
+"https://www.flickr.com/photos/senorcontento/",
+"https://foursquare.com/brandonandrewgo"
+]
+
+paginate_path: "/blog/page:num/"
+paginate: 5
+markdown: kramdown
+permalink: /:categories/:year/:month/:day/:title #Beware that jekyll does count the number of spaces before permalink: and all other variables. Adding spaces either makes a Forbidden message show up as jekyll thinks that permalink: is part of the values: category or will make Jekyll use the default permalink instead without throwing any errors.

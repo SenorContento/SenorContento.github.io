@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="manifest" href="/sitedata/manifest.json">
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta property="fb:admins" content="100007630755367" />
+    <meta property="og:type" content="website" />
+    {% seo title=false %}
+    <meta name="theme-color" content="green">
+    <meta property="og:image" content="/sitedata/images/favicon.png" />
+    <meta name="p:domain_verify" content="6beed528b04540318243016d33840a9c"/>
+    <link type="application/atom+xml" rel="alternate" href="{{page.rss-url}}{{page.site-url}}/blog/atom.xml" title="Señor Contento's Blog" />
+    <link rel="search" type="application/opensearchdescription+xml" href="/sitedata/opensearch.xml" title="Señor Contento's Blog">
+    
+    <meta name="apple-mobile-web-app-title" content="Señor's Blog">
+
+    <!--Icons-->
+    <link rel="apple-touch-icon-precomposed" sizes="1024x1024" href="/sitedata/images/SenorContento-1024x1024.png">
+    <link rel="apple-touch-icon" sizes="1024x1024" href="/sitedata/images/SenorContento-1024x1024.png">
+    <link rel="icon" type="image/png" href="/sitedata/images/SenorContento-1024x1024.png"> <!--For Most Modern Browsers-->
+    <link rel="mask-icon" href="/sitedata/images/SenorContento-Mask.svg" color="#3140FD"><!--For Apple Pinned Tabs-->
+    <link rel="icon" type="image/svg+xml" href="/sitedata/images/SenorContento.svg"><!--New Scalable Icon - Support Still Coming-->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!--jQuery Script-->
+
+    <!--If you use max-width instead of max-device-width, you can test what the mobile formatting looks like by minimizing the window-->
+    <link id="mobile-style" rel="stylesheet" type="text/css" href="/sitedata/stylesheets/mobile-stylesheet.css" media="screen and (max-device-width: 800px)">
+    <link id="pc-style" rel="stylesheet" type="text/css" href="/sitedata/stylesheets/stylesheet.css" media="screen and (min-device-width: 800px)">
+    <link id="pygment-default" rel="stylesheet" type="text/css" href="/sitedata/stylesheets/pygment_trac.css" media="screen">
+
+    <script src="/sitedata/javascripts/mobile-tracking.js"></script>
+    <!--Allows me to detect if the site is being visited by a mobile device - Allows user to override normal settings-->
+
+    <!--<script src='https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML' async></script>-->
+    <!--Script from https://www.mathjax.org which kramdown uses to produce Math equations without needing to pregenerate images-->
+    
+    <meta name="google-site-verification" content="Jw6K4pg1WW9eFjAQW2ISLc-eHv4acYxoSzYmNGEK9uw" /><!--senorcontento.com-->
+    <meta name="google-site-verification" content="_Q99imsaDY6pzCJ-2o6G810F55KMQn6tVYEfkMkzlcU" /><!--senorcontento.github.io-->
+    <meta name="msvalidate.01" content="40E55C2CC463A30A97D8A1F23DCB8E6D" /><!--Bing and Yahoo-->
+    <!--These tags are so I can get and control search engines adding my site-->
+
+    <script src="/sitedata/bower_components/webcomponentsjs/webcomponents.js" async></script>
+    <!--Polyfill Web Components-->
+
+    <script src="/sitedata/javascripts/printable.js" async></script>
+    <!--Code which allows switching to Printable CSS-->
+
+    <link rel="import" href="/sitedata/shadowdom.html">
+    <!--Import code for allowing custom html using ShadowDom-->
+
+    <!--<script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+          elements: document.getElementsByTagName("body")
+        });
+        MathJax.Ajax.config.path["Contrib"] = "/sitedata/javascripts";
+        MathJax.Hub.config.extensions.push("[Contrib]/math-tex-element.js");
+    </script>-->
+    <!--This fixes the fact that Custom HTML elements in ShadowDom breaks MathJax.-->    
+
+    <script src="/sitedata/javascripts/heatmapping.js" async></script>
+    <!--This will allow me to produce heatmaps of how people use my site-->
+
+    <script src="/sitedata/javascripts/loadSW.js"></script>
+    <!--This will allow me to add PWA ability to my site-->
+
+    <title>{{ page.title }} - Señor Contento</title>
+  </head>
+
+  <body>
+    <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-5GLB6X" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <script src="/sitedata/javascripts/analytics-tracking.js" async></script>
+    <!--This code will allow me to see how people use my site-->
+
+    <noscript><h5><div class="header">You kind of need Javascript in order to use this site, just letting you know if you don't heed my warning, parts of this site will be broken!</div></h5></noscript>
+
+    <header>
+      <div class="container">
+        <h1>{{ page.project }}</h1>
+        <h2>{{ page.description }}</h2>
+
+        <nav><section id="general">
+        <!--Site Under Maintenance - Removed Links-->
+        </section></nav>
+      </div>
+    </header>
+
+    <div class="container">
+      <section id="main_content">
+      {{ content }}
+      </section>
+    </div>
+
+    <br><br>
+    <footer><!--Site Under Maintenance - Removed Links--></footer>
+    <!--For Future Reference, the nav tag and footer tag do absolutely nothing unless a reader, like one for the blind, uses it or if I use css to make a format for it-->
+  </body>
+</html>
